@@ -1,6 +1,6 @@
 - insert:
-    - id: focal-memory
-      name: focal-dsh
+    - id: dsh-focal
+      name: dsh-focal
       config:
         captureUserText: true
         captureToolPaths: true
@@ -9,3 +9,21 @@
         maxObservationsPerTask: 40
         maxContextObservations: 8
         maxContextChars: 4000
+        observeDesktop: false
+        captureWindowTitles: false
+        shareDesktopMetadataWithModel: false
+        shareLocalVisualSummariesWithModel: false
+        captureScreenshots: false
+        analyzeScreenshotsLocally: false
+        retainScreenshots: false
+        desktopSampleIntervalMs: 5000
+        desktopMaxSampleIntervalMs: 60000
+        desktopHeartbeatMs: 60000
+        desktopSensorTimeoutMs: 3000
+        screenshotCooldownMs: 60000
+        localVisionTimeoutMs: 45000
+        maxDesktopObservations: 120
+        maxLocalScreenshots: 24
+        blockedDesktopApps: 1password,bitwarden,dashlane,keychain access,keeper,lastpass,loginwindow
+        localVisionBaseUrl: http://127.0.0.1:11434
+        localVisionModel: qwen3-vl:8b

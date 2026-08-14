@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this plugin, please cite the FOCAL paper."
-title: "FOCAL for DeepSeek Harness"
+title: "dsh-focal: FOCAL for DeepSeek Harness"
 type: software
-version: 0.1.1
+version: 0.2.0
 date-released: 2026-08-14
 authors:
   - family-names: Yin
@@ -15,7 +15,7 @@ authors:
     given-names: Bo
   - family-names: Yang
     given-names: Ruosong
-repository-code: "https://github.com/Haoran2099/focal-dsh"
+repository-code: "https://github.com/Haoran2099/dsh-focal"
 license: MIT
 preferred-citation:
   type: article

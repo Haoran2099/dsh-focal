@@ -1,12 +1,14 @@
 {
-  "name": "focal-dsh",
-  "version": "0.1.1",
-  "description": "Task-isolated, privacy-first memory for DeepSeek Harness",
+  "name": "dsh-focal",
+  "version": "0.2.0",
+  "description": "Privacy-first task memory and adaptive local desktop observation for DeepSeek Harness",
   "type": "module",
   "main": "index.js",
   "exports": {
     ".": "./index.js",
-    "./memory": "./src/memory.js"
+    "./memory": "./src/memory.js",
+    "./desktop-memory": "./src/desktop-memory.js",
+    "./desktop-observer": "./src/desktop-observer.js"
   },
   "files": [
     "index.js",
@@ -14,7 +16,9 @@
     "src/**/*.js",
     "LICENSE",
     "README.md",
-    "SECURITY.md"
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "CITATION.cff"
   ],
   "scripts": {
     "test": "node --test",
@@ -29,18 +33,20 @@
     "dsh-plugin",
     "focal",
     "agent-memory",
-    "task-memory"
+    "task-memory",
+    "desktop-observation",
+    "local-first"
   ],
   "author": "Haoran Yin",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Haoran2099/focal-dsh.git"
+    "url": "git+https://github.com/Haoran2099/dsh-focal.git"
   },
   "bugs": {
-    "url": "https://github.com/Haoran2099/focal-dsh/issues"
+    "url": "https://github.com/Haoran2099/dsh-focal/issues"
   },
-  "homepage": "https://github.com/Haoran2099/focal-dsh#readme",
+  "homepage": "https://github.com/Haoran2099/dsh-focal#readme",
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
