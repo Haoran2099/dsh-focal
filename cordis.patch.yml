@@ -1,0 +1,11 @@
+- insert:
+    - id: focal-memory
+      name: focal-dsh
+      config:
+        captureUserText: true
+        captureToolPaths: true
+        injectContext: true
+        maxTasks: 32
+        maxObservationsPerTask: 40
+        maxContextObservations: 8
+        maxContextChars: 4000

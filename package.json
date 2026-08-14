@@ -1,0 +1,54 @@
+{
+  "name": "focal-dsh",
+  "version": "0.1.0",
+  "description": "Task-isolated, privacy-first memory for DeepSeek Harness",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./memory": "./src/memory.js"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "src/**/*.js",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "npm test && npm pack --dry-run"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "focal",
+    "agent-memory",
+    "task-memory"
+  ],
+  "author": "Haoran Yin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haoran2099/focal-dsh.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Haoran2099/focal-dsh/issues"
+  },
+  "homepage": "https://github.com/Haoran2099/focal-dsh#readme",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-home-paths": "0.1.0-rc.6",
+    "@deepseek-ai/dsh-tools": "0.1.0-rc.6",
+    "@deepseek-ai/schemastery": "3.18.1"
+  }
+}
