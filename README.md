@@ -12,11 +12,11 @@ code remains in [`Haoran2099/focal`](https://github.com/Haoran2099/focal).
 
 ## Status
 
-- Plugin version: `v0.1.0`
+- Plugin version: `v0.1.1`
 - DSH compatibility: `0.1.0-rc.6`
 - Verified against official commit
   [`47f943859bef60e4160492346772ded9b24f765a`](https://github.com/deepseek-ai/deepseek-harness/commit/47f943859bef60e4160492346772ded9b24f765a)
-- Runtime imports pinned to the official `0.1.0-rc.6` packages
+- Clean-install and Host-load tested with the official `0.1.0-rc.6` CLI
 - Host plugin only; no Web UI extension yet
 
 DeepSeek Harness is currently a developer preview and warns that compatibility-
@@ -29,15 +29,17 @@ Install directly from the tagged GitHub source. The package is plain ESM and has
 no install-time build script.
 
 ```bash
-dsh plugin --profile focal add github:Haoran2099/focal-dsh#v0.1.0
-dsh --profile focal --dump-config
-dsh --profile focal web
+dsh plugin --profile web add github:Haoran2099/focal-dsh#v0.1.1
+dsh --profile web --dump-config
+dsh --profile web
 ```
+
+Use `--profile headless` instead to add FOCAL to one-shot CLI runs.
 
 Remove it with:
 
 ```bash
-dsh plugin --profile focal remove focal-dsh
+dsh plugin --profile web remove focal-dsh
 ```
 
 ## What it does

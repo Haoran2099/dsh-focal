@@ -33,3 +33,15 @@ test('registers policy, lifecycle listeners, commands and model tools', () => {
   assert.ok(registrations.listeners.has('session/event'))
   assert.ok(registrations.listeners.has('agent/created'))
 })
+
+test('publishes closed tool schemas and rejects invalid recall arguments', () => {
+  const { ctx, registrations } = mockContext()
+  apply(ctx, { dshHome: '/tmp/focal-dsh-plugin-schema-test' })
+  const recall = registrations.tools.find(tool => tool.name === 'focal_recall')
+  assert.equal(recall.parameters.additionalProperties, false)
+  assert.equal(recall.parameters.properties.max_tasks.type, 'integer')
+  assert.throws(
+    () => recall.execute({ max_tasks: 0 }, { agent: { session: { id: 'schema-test', events: [] } } }),
+    /between 1 and 5/,
+  )
+})
